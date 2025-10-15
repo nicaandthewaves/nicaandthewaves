@@ -14,3 +14,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+npm run dev → levanta frontend + backend al mismo tiempo.
+
+npm run dev:front → solo el Angular.
+
+npm run dev:back → solo el backend.

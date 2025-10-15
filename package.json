@@ -1,0 +1,14 @@
+{
+  "name": "nicaandthewaves",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -n FRONT,BACK -c auto \"npm:dev:front\" \"npm:dev:back\"",
+    "dev:front": "npm --workspace frontend run start",
+    "dev:back": "npm --workspace backend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
