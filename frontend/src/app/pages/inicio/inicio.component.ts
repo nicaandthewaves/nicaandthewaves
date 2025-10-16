@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { VideoclipYtComponent } from '../../features/home/videoclip-yt/videoclip-yt.component';
+import { AgendaConciertosComponent } from '../../features/home/agenda-conciertos/agenda-conciertos.component';
+import { AlbumsFotosComponent } from '../../features/home/albums-fotos/albums-fotos.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [],
+  imports: [VideoclipYtComponent, AgendaConciertosComponent, AlbumsFotosComponent],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.scss'
+  styleUrls: ['./inicio.component.scss']
 })
-export class InicioComponent {
-
-}
+export class InicioComponent {}
