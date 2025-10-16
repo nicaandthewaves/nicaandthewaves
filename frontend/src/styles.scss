@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #0b0c10;
+  --card: rgba(255,255,255,0.04);
+  --stroke: rgba(255,255,255,0.12);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.64);
+  --accent: #00d3b7;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 70% -10%, #122 0%, var(--bg) 55%) fixed;
+  color: var(--text);
+}
+
+.container { width: min(1200px, 92vw); margin: 0 auto; padding: 24px 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.navbar .nav {
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.logo { font-weight:700; letter-spacing:.5px; color:var(--text); text-decoration:none; }
+.links { display:flex; gap:16px; flex-wrap:wrap; }
+.links a { color: var(--muted); text-decoration:none; font-weight:500; }
+.links a.active, .links a:hover { color: var(--accent); }
+
+.footer .footer-grid {
+  display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.footer .social a { color: var(--accent); margin-left: 8px; }
+
+.video-wrap { position: relative; width: 100%; aspect-ratio: 16/9; }
+.video-wrap iframe { position:absolute; inset:0; width:100%; height:100%; }
+
+.table { width:100%; border-collapse: collapse; }
+.table th, .table td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,.08); text-align:left; }
+.table th { color: var(--muted); font-weight:600; }
+
+.two-col { display:grid; grid-template-columns: 1.4fr 1fr; gap:16px; }
+@media (max-width: 920px) { .two-col { grid-template-columns: 1fr; } }
+
+.lyrics { white-space: pre-wrap; background: rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.08); padding:16px; border-radius:12px; }
+
+.form .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+.form .grid .full { grid-column: 1 / -1; }
+.form label { display:flex; flex-direction:column; gap:8px; font-weight:500; color: var(--muted); }
+.form input, .form textarea {
+  padding: 12px 14px; border-radius: 12px; border:1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.02); color: var(--text);
+}
+.btn, .btn-link {
+  display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06); color: var(--text); text-decoration:none; cursor:pointer;
+}
+.btn:hover, .btn-link:hover { opacity:.9; }

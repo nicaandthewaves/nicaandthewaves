@@ -1,0 +1,37 @@
+<section class="hero-slim card">
+  <h1>Contrataciones</h1>
+  <p>Dejanos tu consulta y te contactamos</p>
+</section>
+
+<section class="card form">
+  <form (ngSubmit)="submit()" #f="ngForm">
+    <div class="grid">
+      <label>
+        Nombre / Empresa
+        <input name="nombre" [(ngModel)]="model.nombre" required />
+      </label>
+
+      <label>
+        Teléfono
+        <input name="telefono" [(ngModel)]="model.telefono" required />
+      </label>
+
+      <label>
+        Correo electrónico
+        <input name="email" type="email" [(ngModel)]="model.email" required />
+      </label>
+
+      <label>
+        Asunto
+        <input name="asunto" [(ngModel)]="model.asunto" required />
+      </label>
+
+      <label class="full">
+        Mensaje
+        <textarea name="mensaje" rows="5" [(ngModel)]="model.mensaje" required></textarea>
+      </label>
+    </div>
+
+    <button class="btn" [disabled]="f.invalid">Enviar</button>
+  </form>
+</section>
